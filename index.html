@@ -24,6 +24,7 @@
             <img src="Assets/Photos and Logos/EN.png" alt="English" />
           </button>
         </div>
+        <button class="theme-toggle" type="button" data-theme-toggle>Dark</button>
       </nav>
       <div class="hero-main">
         <div class="hero-content">
@@ -559,6 +560,7 @@
 
       const i18nElements = document.querySelectorAll("[data-i18n]");
       const langButtons = document.querySelectorAll("[data-lang]");
+      const themeToggle = document.querySelector("[data-theme-toggle]");
 
       const applyLanguage = (lang) => {
         const dictionary = translations[lang] || translations.pt;
@@ -590,6 +592,24 @@
 
       const savedLang = localStorage.getItem("siteLang") || "pt";
       applyLanguage(savedLang);
+
+      const applyTheme = (theme) => {
+        document.documentElement.dataset.theme = theme;
+        if (themeToggle) {
+          themeToggle.textContent = theme === "dark" ? "Light" : "Dark";
+        }
+        localStorage.setItem("siteTheme", theme);
+      };
+
+      if (themeToggle) {
+        themeToggle.addEventListener("click", () => {
+          const current = localStorage.getItem("siteTheme") || "light";
+          applyTheme(current === "dark" ? "light" : "dark");
+        });
+      }
+
+      const savedTheme = localStorage.getItem("siteTheme") || "light";
+      applyTheme(savedTheme);
 
       const modal = document.querySelector(".photo-modal");
       const modalImg = document.querySelector(".photo-modal-img");

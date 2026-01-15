@@ -12,6 +12,18 @@
   --shadow: rgba(12, 26, 56, 0.14);
 }
 
+html[data-theme="dark"] {
+  --ink: #e6edf7;
+  --ink-soft: #c3cfdf;
+  --blue-900: #d9e6ff;
+  --blue-800: #8fb0ff;
+  --blue-700: #78a2ff;
+  --blue-500: #5f87e5;
+  --blue-200: #22345c;
+  --paper: #0d1524;
+  --shadow: rgba(0, 0, 0, 0.35);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -42,6 +54,14 @@ body {
   isolation: isolate;
 }
 
+html[data-theme="dark"] body {
+  background:
+    linear-gradient(120deg, rgba(79, 120, 214, 0.2) 0%, rgba(30, 45, 82, 0.3) 45%, rgba(12, 18, 32, 0.8) 85%),
+    radial-gradient(circle at 10% 10%, rgba(90, 130, 220, 0.2) 0%, rgba(60, 90, 160, 0) 55%),
+    radial-gradient(circle at 80% 0%, rgba(60, 90, 160, 0.2) 0%, rgba(40, 60, 120, 0) 55%),
+    linear-gradient(180deg, #0c1424 0%, #0b1220 100%);
+}
+
 body::before {
   content: "";
   position: fixed;
@@ -55,6 +75,16 @@ body::before {
     repeating-linear-gradient(156deg, rgba(27, 52, 112, 0.1) 0 5px, transparent 5px 130px),
     linear-gradient(140deg, rgba(37, 69, 130, 0.08) 0%, rgba(245, 248, 255, 0) 60%);
   opacity: 0.45;
+}
+
+html[data-theme="dark"] body::before {
+  background:
+    repeating-linear-gradient(18deg, rgba(130, 165, 240, 0.12) 0 5px, transparent 5px 110px),
+    repeating-linear-gradient(62deg, rgba(110, 145, 220, 0.1) 0 5px, transparent 5px 140px),
+    repeating-linear-gradient(118deg, rgba(110, 145, 220, 0.1) 0 5px, transparent 5px 120px),
+    repeating-linear-gradient(156deg, rgba(90, 125, 200, 0.1) 0 5px, transparent 5px 130px),
+    linear-gradient(140deg, rgba(60, 90, 160, 0.2) 0%, rgba(15, 20, 35, 0) 60%);
+  opacity: 0.35;
 }
 
 a {
@@ -94,6 +124,11 @@ a {
   box-shadow:
     0 12px 30px rgba(15, 30, 60, 0.12),
     0 2px 6px rgba(15, 30, 60, 0.08);
+}
+
+html[data-theme="dark"] .nav {
+  background: rgba(14, 22, 40, 0.9);
+  border-color: rgba(130, 165, 240, 0.35);
 }
 
 .logo {
@@ -176,6 +211,23 @@ a {
   border-radius: 50%;
   object-fit: cover;
   display: block;
+}
+
+.theme-toggle {
+  border: 2px solid rgba(37, 69, 130, 0.3);
+  background: rgba(231, 239, 255, 0.9);
+  color: var(--blue-900);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+}
+
+html[data-theme="dark"] .theme-toggle {
+  border-color: rgba(130, 165, 240, 0.4);
+  background: rgba(18, 26, 46, 0.95);
+  color: var(--ink);
 }
 
 .hero-content {
@@ -335,6 +387,39 @@ h1 {
   border-radius: 20px;
   box-shadow: 0 16px 40px var(--shadow);
   border: 4px solid rgba(37, 69, 130, 0.28);
+}
+
+html[data-theme="dark"] .info-card,
+html[data-theme="dark"] .skill-card,
+html[data-theme="dark"] .year-card,
+html[data-theme="dark"] .contact-card,
+html[data-theme="dark"] .photo-modal-content {
+  background: #0f1a2f;
+  border-color: rgba(130, 165, 240, 0.3);
+}
+
+html[data-theme="dark"] .section-header h2,
+html[data-theme="dark"] .card-title,
+html[data-theme="dark"] .year-summary,
+html[data-theme="dark"] .year-body h3 {
+  color: var(--ink);
+}
+
+html[data-theme="dark"] .subtitle,
+html[data-theme="dark"] .section-header p,
+html[data-theme="dark"] .year-text,
+html[data-theme="dark"] .note,
+html[data-theme="dark"] .focus-list {
+  color: var(--ink-soft);
+}
+
+html[data-theme="dark"] .year-summary {
+  background: rgba(24, 36, 64, 0.9);
+}
+
+html[data-theme="dark"] .photo-card figcaption,
+html[data-theme="dark"] .tool-badge figcaption {
+  background: rgba(10, 14, 24, 0.85);
 }
 
 .info-card h3 {
