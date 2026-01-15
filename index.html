@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="utf-8" />
@@ -9,24 +9,43 @@
   <body>
     <header class="hero">
       <nav class="nav">
-        <span class="logo">RCAO</span>
+        <span class="logo">Rafael Costa Amaro de Oliveira</span>
         <div class="nav-links">
-          <a href="#sobre">Sobre</a>
-          <a href="#competencias">Competencias</a>
-          <a href="#projetos">Projetos</a>
-          <a href="#contato">Contato</a>
+          <a href="#sobre" data-i18n="nav.about">Sobre</a>
+          <a href="#competencias" data-i18n="nav.skills">Competências</a>
+          <a href="#experiencia" data-i18n="nav.experience">Experiência</a>
+          <a href="#contato" data-i18n="nav.contact">Contato</a>
+        </div>
+        <div class="lang-switch" role="group" aria-label="Idioma">
+          <button class="lang-toggle" type="button" data-lang="pt" aria-label="Português">
+            <img src="Assets/Photos and Logos/BRASIL.png" alt="Português" />
+          </button>
+          <button class="lang-toggle" type="button" data-lang="en" aria-label="English">
+            <img src="Assets/Photos and Logos/EN.png" alt="English" />
+          </button>
         </div>
       </nav>
-      <div class="hero-content">
-        <p class="eyebrow">Modelagem de Processos Industriais</p>
-        <h1>Rafael Costa Amaro de Oliveira</h1>
-        <p class="subtitle">
-          Graduando em Quimica Industrial na UFRJ, atuando com simulacoes em ASPEN HYSYS, ASPEN PLUS
-          e automatizacoes em Python.
-        </p>
-        <div class="cta-row">
-          <a class="primary-btn" href="#projetos">Ver projetos</a>
-          <a class="ghost-btn" href="#contato">Falar comigo</a>
+      <div class="hero-main">
+        <div class="hero-content">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Bem-vindo ao meu cantinho acadêmico</p>
+          <h1 data-i18n="hero.title">Prazer, Rafael!</h1>
+          <p class="subtitle" data-i18n="hero.subtitle">
+            Sou graduando em Química Industrial na UFRJ e curto transformar ciência em
+            processos que funcionam de verdade. Aqui você conhece um pouco da minha
+            jornada, das minhas áreas de atuação e do que me move na pesquisa.
+          </p>
+          <div class="hero-logos">
+            <img src="Assets/Photos and Logos/EQ.png" alt="Escola de Química" />
+            <img src="Assets/Photos and Logos/UFRJ.png" alt="UFRJ" />
+            <img class="logo-lipcat" src="Assets/Photos and Logos/Lipcat Logo.PNG" alt="LIPCAT" />
+          </div>
+          <div class="cta-row">
+            <a class="primary-btn" href="#experiencia" data-i18n="hero.cta.primary">Ver trajetória</a>
+            <a class="ghost-btn" href="#contato" data-i18n="hero.cta.secondary">Falar comigo</a>
+          </div>
+        </div>
+        <div class="hero-profile">
+          <img src="Assets/Photos and Logos/Perfil.png" alt="Foto de perfil do Rafael" />
         </div>
       </div>
       <div class="hero-ornament"></div>
@@ -35,96 +54,594 @@
     <main>
       <section id="sobre" class="section about">
         <div class="section-header">
-          <h2>Sobre</h2>
-          <p>
-            Estudante de graduacao em Quimica Industrial na Universidade Federal do Rio de Janeiro
-            (UFRJ). Trabalho com modelagem de processos industriais, criando simulacoes e
-            automatizacoes que aceleram analises e decisao tecnica.
-          </p>
+          <h2 data-i18n="about.title">Sobre</h2>
         </div>
         <div class="about-grid">
-          <div class="info-card">
-            <h3>Foco atual</h3>
-            <p>
-              Desenvolvimento de simulacoes integradas, otimizacao de fluxos e padronizacao de dados
-              para projetos industriais.
-            </p>
+          <div class="info-card static-card">
+            <h3 class="card-title" data-i18n="about.areas.title">Áreas de atuação</h3>
+            <ul class="focus-list">
+              <li data-i18n="about.areas.item1">Cinética e termodinâmica (reações e energia).</li>
+              <li data-i18n="about.areas.item2">Engenharia de processos e integração energética.</li>
+              <li data-i18n="about.areas.item3">Catálise heterogênea e desempenho catalítico.</li>
+              <li data-i18n="about.areas.item4">Transição energética: H2 e descarbonização.</li>
+              <li data-i18n="about.areas.item5">Modelagem, experimento e análise de dados.</li>
+            </ul>
           </div>
-          <div class="info-card">
-            <h3>Ferramentas</h3>
-            <p>ASPEN HYSYS, ASPEN PLUS, Python, planilhas tecnicas e relatorios.</p>
-          </div>
-          <div class="info-card">
-            <h3>Interesse</h3>
-            <p>Energia, processos sustentaveis, digitalizacao e controle de operacoes.</p>
+
+          <div class="info-card static-card tech-card">
+            <h3 class="card-title" data-i18n="about.tech.title">Tecnologias</h3>
+            <div class="tool-badges">
+              <figure class="tool-badge">
+                <img src="Assets/Photos and Logos/Hysys Logo.png" alt="Aspen HYSYS" />
+                <figcaption>Aspen HYSYS</figcaption>
+              </figure>
+              <figure class="tool-badge">
+                <img src="Assets/Photos and Logos/Aspen Logo.png" alt="Aspen Plus" />
+                <figcaption>Aspen Plus</figcaption>
+              </figure>
+              <figure class="tool-badge">
+                <img src="Assets/Photos and Logos/Python Logo.png" alt="Python" />
+                <figcaption>Python</figcaption>
+              </figure>
+              <figure class="tool-badge">
+                <img src="Assets/Photos and Logos/Git Logo.png" alt="Git" />
+                <figcaption>GitHub</figcaption>
+              </figure>
+              <figure class="tool-badge">
+                <img src="Assets/Photos and Logos/Office Logo.png" alt="Microsoft Office" />
+                <figcaption>Office 365</figcaption>
+              </figure>
+              <figure class="tool-badge">
+                <img src="Assets/Photos and Logos/VS Logo.png" alt="Visual Studio" />
+                <figcaption>VS Code</figcaption>
+              </figure>
+            </div>
           </div>
         </div>
       </section>
 
       <section id="competencias" class="section skills">
         <div class="section-header">
-          <h2>Competencias</h2>
-          <p>Conjunto de habilidades tecnicas e analiticas aplicadas ao dia a dia.</p>
+          <h2 data-i18n="skills.title">Competências</h2>
+          <p data-i18n="skills.subtitle">
+            Se quiser entender meu lado técnico, aqui estão as áreas em que eu mais me aprofundo.
+          </p>
         </div>
-        <div class="chip-grid">
-          <span>Modelagem de processos</span>
-          <span>Simulacao termodinamica</span>
-          <span>Analise de sensibilidade</span>
-          <span>Automatizacao com Python</span>
-          <span>Tratamento de dados</span>
-          <span>Documentacao tecnica</span>
+
+        <div class="tools-wrap">
+          <div class="skill-grid">
+            <article class="skill-card">
+              <img class="skill-media-img" src="Assets/Photos and Logos/Modelo.png" alt="Modelagem de processos" />
+              <h3 data-i18n="skills.modeling.title">Modelagem de processos</h3>
+              <p data-i18n="skills.modeling.desc">
+                Estruturo fluxos, balanços e cenários para entender o processo por inteiro.
+              </p>
+            </article>
+            <article class="skill-card">
+              <img class="skill-media-img" src="Assets/Photos and Logos/Termo.png" alt="Termodinâmica aplicada" />
+              <h3 data-i18n="skills.thermo.title">Termodinâmica aplicada</h3>
+              <p data-i18n="skills.thermo.desc">
+                Equilíbrio, energia e comportamento real de sistemas em operação.
+              </p>
+            </article>
+            <article class="skill-card">
+              <img class="skill-media-img zoom" src="Assets/Photos and Logos/Cinética.png" alt="Cinética e reações" />
+              <h3 data-i18n="skills.kinetics.title">Cinética e reações</h3>
+              <p data-i18n="skills.kinetics.desc">
+                Mecanismos, taxa de reação e limitações de transporte no mundo real.
+              </p>
+            </article>
+            <article class="skill-card">
+              <img class="skill-media-img" src="Assets/Photos and Logos/Energia.png" alt="Integração energética" />
+              <h3 data-i18n="skills.energy.title">Integração energética</h3>
+              <p data-i18n="skills.energy.desc">
+                Procuro eficiência, reaproveitamento e rotas mais inteligentes.
+              </p>
+            </article>
+            <article class="skill-card">
+              <img class="skill-media-img" src="Assets/Photos and Logos/Automatização.png" alt="Dados e automação" />
+              <h3 data-i18n="skills.data.title">Dados e automação</h3>
+              <p data-i18n="skills.data.desc">
+                Organizo dados e automatizo análise para acelerar decisões técnicas.
+              </p>
+            </article>
+            <article class="skill-card">
+              <img class="skill-media-img" src="Assets/Photos and Logos/Documentação.png" alt="Documentação técnica" />
+              <h3 data-i18n="skills.docs.title">Documentação técnica</h3>
+              <p data-i18n="skills.docs.desc">
+                Registro claro de hipóteses, resultados e aprendizados.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section id="projetos" class="section projects">
+      <section id="experiencia" class="section experience">
         <div class="section-header">
-          <h2>Projetos em destaque</h2>
-          <p>Alguns trabalhos e estudos recentes (posso atualizar conforme necessario).</p>
+          <h2 data-i18n="experience.title">Experiência</h2>
+          <p data-i18n="experience.subtitle">
+            Para entender onde estou hoje, aqui vai um resumo da minha jornada por aqui.
+          </p>
         </div>
-        <div class="project-grid">
-          <article class="project-card">
-            <h3>Simulacao de unidade de separacao</h3>
-            <p>
-              Modelo completo de separacao com avaliacao de parametros e analise de eficiencia
-              energetica.
-            </p>
-            <a href="#">Detalhes</a>
-          </article>
-          <article class="project-card">
-            <h3>Automacao de relatorios</h3>
-            <p>Pipeline em Python para gerar relatorios tecnicos e indicadores de performance.</p>
-            <a href="#">Detalhes</a>
-          </article>
-          <article class="project-card">
-            <h3>Otimizacao de malha de processos</h3>
-            <p>
-              Estudos de sensibilidade e propostas de melhorias operacionais para reduzir perdas.
-            </p>
-            <a href="#">Detalhes</a>
-          </article>
+
+        <div class="timeline-label" data-i18n="experience.timelineLabel">Timeline</div>
+        <div class="year-timeline">
+          <div class="year-card">
+            <input id="year-2022" class="year-toggle" type="checkbox" />
+            <label class="year-summary" for="year-2022">2022</label>
+
+            <div class="year-body">
+              <h3 data-i18n="experience.2022.title">Início da jornada e primeiros projetos</h3>
+
+              <p class="year-text" data-i18n="experience.2022.p1">
+                Em 2022 entrei no LaMMP (Laboratório de Microbiologia Molecular e Proteínas)
+                e no BOSS Group (Grupo de Biocatálise e Síntese Orgânica), onde comecei a
+                trabalhar com biocatálise e síntese orgânica. Meu foco foi investigar a conversão
+                de ácidos graxos em hidrocarbonetos usando a enzima CVFAP, buscando entender a
+                eficiência catalítica e aplicar essa rota como alternativa sustentável para
+                biocombustíveis.
+              </p>
+
+              <div class="year-logos">
+                <img class="logo-boss" src="Assets/Photos and Logos/Boss Logo.png" alt="BOSS Group" />
+              </div>
+
+              <p class="year-text" data-i18n="experience.2022.p2" data-i18n-html="true">
+                No mesmo período, participei do projeto de extensão
+                <strong>SE LIGA NA BIOTEC!</strong>, durante a SNCT 2022. A ideia era
+                aproximar estudantes de escolas públicas do trabalho feito nos laboratórios
+                da UFRJ, com atividades interativas e explicações acessíveis.
+              </p>
+
+              <p class="year-text" data-i18n="experience.2022.p3" data-i18n-html="true">
+                Esse projeto foi publicado na Revista Ensina Biotec (Volume 2, 2023).
+                <a class="inline-link" href="https://revistaensinabiotec.ufop.br/" target="_blank" rel="noopener">
+                  Ver revista
+                </a>
+              </p>
+
+              <div class="photo-grid">
+                <figure class="photo-card photo-preview" data-full="Assets/Photos and Logos/Biotec.png" data-alt="SE LIGA NA BIOTEC - Estações interativas" tabindex="0" role="button">
+                  <img src="Assets/Photos and Logos/Biotec.png" alt="SE LIGA NA BIOTEC - Estações interativas" />
+                  <figcaption data-i18n="experience.2022.fig1">
+                    Estações interativas na visita ao Laboratório de Biotecnologia Microbiana,
+                    com demonstrações práticas e materiais didáticos de microbiologia.
+                  </figcaption>
+                </figure>
+                <figure class="photo-card photo-preview" data-full="Assets/Photos and Logos/Biotec 2.png" data-alt="SE LIGA NA BIOTEC - Demonstrações experimentais" tabindex="0" role="button">
+                  <img src="Assets/Photos and Logos/Biotec 2.png" alt="SE LIGA NA BIOTEC - Demonstrações experimentais" />
+                  <figcaption data-i18n="experience.2022.fig2">
+                    Demonstrações experimentais no laboratório biotecnológico, com foco em
+                    fermentação, boas práticas e higiene em ambiente de pesquisa.
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <div class="year-card">
+            <input id="year-2023" class="year-toggle" type="checkbox" />
+            <label class="year-summary" for="year-2023">2023</label>
+
+            <div class="year-body">
+              <h3 data-i18n="experience.2023.title">Encerramento de ciclos e novos caminhos</h3>
+
+              <p class="year-text" data-i18n="experience.2023.p1">
+                Em 2023 encerrei minha etapa no BOSS Group (Grupo de Biocatálise e Síntese Orgânica)
+                e no LaMMP (Laboratório de Microbiologia Molecular e Proteínas). Nesse período,
+                tive a oportunidade de apoiar pesquisas em parceria com o SENAI CETIQT, ampliando
+                meu contato com aplicações industriais.
+              </p>
+
+              <p class="year-text" data-i18n="experience.2023.p2">
+                Também foi o ano da minha primeira apresentação em congresso, no SIBEN,
+                o que me motivou a seguir buscando aprendizado e constância acadêmica.
+              </p>
+
+              <div class="photo-grid">
+                <figure class="photo-card">
+                  <img src="Assets/Photos and Logos/Despedida.png" alt="Encerramento no BOSS Group e LaMMP" />
+                  <figcaption data-i18n="experience.2023.fig1">
+                    Encerramento de ciclo no laboratório, celebrando a equipe e os aprendizados.
+                  </figcaption>
+                </figure>
+                <figure class="photo-card photo-preview" data-full="Assets/Photos and Logos/SIAC 1.png" data-alt="Apresentação na SIAC" tabindex="0" role="button">
+                  <img src="Assets/Photos and Logos/SIAC 1.png" alt="Apresentação na SIAC" />
+                  <figcaption data-i18n="experience.2023.fig2">
+                    Minha primeira apresentação na SIAC, com troca de ideias e feedback da comunidade.
+                  </figcaption>
+                </figure>
+                <figure class="photo-card">
+                  <img src="Assets/Photos and Logos/SENAI.png" alt="Parceria com o SENAI CETIQT" />
+                  <figcaption data-i18n="experience.2023.fig3">
+                    Registro da colaboração em projeto conjunto com o SENAI CETIQT.
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <div class="year-card">
+            <input id="year-2024" class="year-toggle" type="checkbox" />
+            <label class="year-summary" for="year-2024">2024</label>
+
+            <div class="year-body">
+              <h3 data-i18n="experience.2024.title">Primeiro contato frente à indústria</h3>
+
+              <p class="year-text" data-i18n="experience.2024.p1">
+                Em 2024 concentrei minha pesquisa no LMCP (Laboratório de Macromoléculas e Colóides
+                na Indústria do Petróleo), com uma linha em parceria com a Shell voltada ao uso de
+                nanopartículas de óxido de sílica em soluções poliméricas para criar nanofluidos
+                capazes de alterar a molhabilidade de rochas carbonáticas, pensando em aplicações
+                de EOR offshore.
+              </p>
+
+              <div class="year-logos">
+                <img class="logo-lmcp" src="Assets/Photos and Logos/LMCP Logo.png" alt="LMCP" />
+                <img class="logo-ima" src="Assets/Photos and Logos/IMA.png" alt="IMA" />
+              </div>
+
+              <p class="year-text" data-i18n="experience.2024.p2">
+                Na segunda metade do ano, passei a trabalhar na construção de base bibliográfica e
+                de dados para uma planta piloto de reinjeção de água produzida (PWRI), em parceria
+                com a Petrobras, estudando estratégias de otimização e preparo de soluções. Foi
+                nesse período que começou meu interesse em desenvolver uma linha de pesquisa focada
+                em simulações, automatização e modelagem de processos.
+              </p>
+
+              <div class="photo-grid">
+                <figure class="photo-card photo-preview" data-full="Assets/Photos and Logos/SIBEN.png" data-alt="Apresentação no SIBEN" tabindex="0" role="button">
+                  <img src="Assets/Photos and Logos/SIBEN.png" alt="Apresentação no SIBEN" />
+                  <figcaption data-i18n="experience.2024.fig1">
+                    Apresentação no SIBEN (Simpósio Brasileiro de Engenharia da Nanotecnologia),
+                    compartilhando resultados e aprendizados.
+                  </figcaption>
+                </figure>
+                <figure class="photo-card photo-preview" data-full="Assets/Photos and Logos/POSTER.png" data-alt="Resumo publicado nos anais do congresso" tabindex="0" role="button">
+                  <img src="Assets/Photos and Logos/POSTER.png" alt="Resumo publicado nos anais do congresso" />
+                  <figcaption data-i18n="experience.2024.fig2">
+                    Resumo publicado nos anais do congresso, consolidando os resultados do estudo.
+                  </figcaption>
+                </figure>
+                <figure class="photo-card photo-preview" data-full="Assets/Photos and Logos/SIAC 2.png" data-alt="Apresentação na SIAC" tabindex="0" role="button">
+                  <img src="Assets/Photos and Logos/SIAC 2.png" alt="Apresentação na SIAC" />
+                  <figcaption data-i18n="experience.2024.fig3">
+                    Apresentação na SIAC 2024 com foco nos avanços do projeto.
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <div class="year-card">
+            <input id="year-2025" class="year-toggle" type="checkbox" />
+            <label class="year-summary" for="year-2025">2025</label>
+
+            <div class="year-body">
+              <h3 data-i18n="experience.2025.title">Nova casa e conexões em catálise</h3>
+
+              <p class="year-text" data-i18n="experience.2025.p1" data-i18n-html="true">
+                Em 2025 cheguei ao LIPCAT (Laboratório de Intensificação de Processos e
+                Catálise), que virou minha casa. Gosto de acompanhar e compartilhar as
+                publicações do laboratório no
+                <a class="inline-link" href="https://www.lipcat.com.br/pt" target="_blank" rel="noopener">site oficial</a>
+                e no
+                <a class="inline-link" href="https://www.instagram.com/lipcatufrj/" target="_blank" rel="noopener">Instagram</a>,
+                porque elas mostram o dia a dia do grupo e as linhas de pesquisa que estão
+                ganhando forma.
+              </p>
+
+              <p class="year-text" data-i18n="experience.2025.p2">
+                Graças ao LIPCAT, participei do 6º Encontro Regional de Catálise (ERCAT 2025),
+                onde acompanhei palestras e discuti temas emergentes da catálise no Brasil e
+                no mundo.
+              </p>
+
+              <div class="photo-grid">
+                <figure class="photo-card photo-preview" data-full="Assets/Photos and Logos/LIPCAT.png" data-alt="Confraternização de fim de ano do LIPCAT" tabindex="0" role="button">
+                  <img src="Assets/Photos and Logos/LIPCAT.png" alt="Confraternização de fim de ano do LIPCAT" />
+                  <figcaption data-i18n="experience.2025.fig1">
+                    Confraternização de fim de ano com o time do LIPCAT.
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       <section id="contato" class="section contact">
         <div class="section-header">
-          <h2>Contato</h2>
-          <p>Aberto a conexoes, projetos e trocas tecnicas.</p>
+          <h2 data-i18n="contact.title">Contato</h2>
+          <p data-i18n="contact.subtitle">Aberto a conexões, projetos e trocas técnicas.</p>
         </div>
         <div class="contact-card">
           <p>
-            <strong>Email:</strong> seuemail@email.com
+            <strong><span data-i18n="contact.emailLabel">Email</span>:</strong>
+            rafael.oliveira18@eq.ufrj.br
             <span class="divider">|</span>
-            <strong>LinkedIn:</strong> linkedin.com/in/seu-linkedin
+            <strong><span data-i18n="contact.linkedinLabel">LinkedIn</span>:</strong>
+            <a
+              class="inline-link"
+              href="https://www.linkedin.com/in/de-oliveira-rafael?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B87ANgidDRAmXL8D3cNyL2w%3D%3D"
+              target="_blank"
+              rel="noopener"
+            >
+              linkedin.com/in/de-oliveira-rafael
+            </a>
           </p>
-          <p class="note">
-            Disponivel para conversas sobre simulacao de processos, automacao e pesquisa aplicada.
+          <p class="note" data-i18n="contact.note">
+            Disponível para conversas sobre simulação de processos, automação e pesquisa aplicada.
           </p>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <p>© 2026 Rafael Costa Amaro de Oliveira. Todos os direitos reservados.</p>
+      <p data-i18n="footer.note">
+        © 2026 Rafael Costa Amaro de Oliveira. Todos os direitos reservados.
+      </p>
     </footer>
+    <div class="photo-modal" hidden>
+      <div class="photo-modal-backdrop" data-close></div>
+      <div class="photo-modal-content" role="dialog" aria-modal="true">
+        <img class="photo-modal-img" alt="" />
+      </div>
+    </div>
+    <script>
+      const translations = {
+        pt: {
+          "nav.about": "Sobre",
+          "nav.skills": "Competências",
+          "nav.experience": "Experiência",
+          "nav.contact": "Contato",
+          "hero.eyebrow": "Bem-vindo ao meu cantinho acadêmico",
+          "hero.title": "Prazer, Rafael!",
+          "hero.subtitle":
+            "Sou graduando em Química Industrial na UFRJ e curto transformar ciência em processos que funcionam de verdade. Aqui você conhece um pouco da minha jornada, das minhas áreas de atuação e do que me move na pesquisa.",
+          "hero.cta.primary": "Ver trajetória",
+          "hero.cta.secondary": "Falar comigo",
+          "about.title": "Sobre",
+          "about.areas.title": "Áreas de atuação",
+          "about.areas.item1": "Cinética e termodinâmica (reações e energia).",
+          "about.areas.item2": "Engenharia de processos e integração energética.",
+          "about.areas.item3": "Catálise heterogênea e desempenho catalítico.",
+          "about.areas.item4": "Transição energética: H2 e descarbonização.",
+          "about.areas.item5": "Modelagem, experimento e análise de dados.",
+          "about.tech.title": "Tecnologias",
+          "skills.title": "Competências",
+          "skills.subtitle":
+            "Se quiser entender meu lado técnico, aqui estão as áreas em que eu mais me aprofundo.",
+          "skills.modeling.title": "Modelagem de processos",
+          "skills.modeling.desc":
+            "Estruturo fluxos, balanços e cenários para entender o processo por inteiro.",
+          "skills.thermo.title": "Termodinâmica aplicada",
+          "skills.thermo.desc": "Equilíbrio, energia e comportamento real de sistemas em operação.",
+          "skills.kinetics.title": "Cinética e reações",
+          "skills.kinetics.desc": "Mecanismos, taxa de reação e limitações de transporte no mundo real.",
+          "skills.energy.title": "Integração energética",
+          "skills.energy.desc": "Procuro eficiência, reaproveitamento e rotas mais inteligentes.",
+          "skills.data.title": "Dados e automação",
+          "skills.data.desc": "Organizo dados e automatizo análise para acelerar decisões técnicas.",
+          "skills.docs.title": "Documentação técnica",
+          "skills.docs.desc": "Registro claro de hipóteses, resultados e aprendizados.",
+          "experience.title": "Experiência",
+          "experience.subtitle":
+            "Para entender onde estou hoje, aqui vai um resumo da minha jornada por aqui.",
+          "experience.timelineLabel": "Timeline",
+          "experience.2022.title": "Início da jornada e primeiros projetos",
+          "experience.2022.p1":
+            "Em 2022 entrei no LaMMP (Laboratório de Microbiologia Molecular e Proteínas) e no BOSS Group (Grupo de Biocatálise e Síntese Orgânica), onde comecei a trabalhar com biocatálise e síntese orgânica. Meu foco foi investigar a conversão de ácidos graxos em hidrocarbonetos usando a enzima CVFAP, buscando entender a eficiência catalítica e aplicar essa rota como alternativa sustentável para biocombustíveis.",
+          "experience.2022.p2":
+            "No mesmo período, participei do projeto de extensão <strong>SE LIGA NA BIOTEC!</strong>, durante a SNCT 2022. A ideia era aproximar estudantes de escolas públicas do trabalho feito nos laboratórios da UFRJ, com atividades interativas e explicações acessíveis.",
+          "experience.2022.p3":
+            "Esse projeto foi publicado na Revista Ensina Biotec (Volume 2, 2023). <a class=\"inline-link\" href=\"https://revistaensinabiotec.ufop.br/\" target=\"_blank\" rel=\"noopener\">Ver revista</a>",
+          "experience.2022.fig1":
+            "Estações interativas na visita ao Laboratório de Biotecnologia Microbiana, com demonstrações práticas e materiais didáticos de microbiologia.",
+          "experience.2022.fig2":
+            "Demonstrações experimentais no laboratório biotecnológico, com foco em fermentação, boas práticas e higiene em ambiente de pesquisa.",
+          "experience.2023.title": "Encerramento de ciclos e novos caminhos",
+          "experience.2023.p1":
+            "Em 2023 encerrei minha etapa no BOSS Group (Grupo de Biocatálise e Síntese Orgânica) e no LaMMP (Laboratório de Microbiologia Molecular e Proteínas). Nesse período, tive a oportunidade de apoiar pesquisas em parceria com o SENAI CETIQT, ampliando meu contato com aplicações industriais.",
+          "experience.2023.p2":
+            "Também foi o ano da minha primeira apresentação em congresso, no SIBEN, o que me motivou a seguir buscando aprendizado e constância acadêmica.",
+          "experience.2023.fig1":
+            "Encerramento de ciclo no laboratório, celebrando a equipe e os aprendizados.",
+          "experience.2023.fig2":
+            "Minha primeira apresentação na SIAC, com troca de ideias e feedback da comunidade.",
+          "experience.2023.fig3":
+            "Registro da colaboração em projeto conjunto com o SENAI CETIQT.",
+          "experience.2024.title": "Primeiro contato frente à indústria",
+          "experience.2024.p1":
+            "Em 2024 concentrei minha pesquisa no LMCP (Laboratório de Macromoléculas e Colóides na Indústria do Petróleo), com uma linha em parceria com a Shell voltada ao uso de nanopartículas de óxido de sílica em soluções poliméricas para criar nanofluidos capazes de alterar a molhabilidade de rochas carbonáticas, pensando em aplicações de EOR offshore.",
+          "experience.2024.p2":
+            "Na segunda metade do ano, passei a trabalhar na construção de base bibliográfica e de dados para uma planta piloto de reinjeção de água produzida (PWRI), em parceria com a Petrobras, estudando estratégias de otimização e preparo de soluções. Foi nesse período que começou meu interesse em desenvolver uma linha de pesquisa focada em simulações, automatização e modelagem de processos.",
+          "experience.2024.fig1":
+            "Apresentação no SIBEN (Simpósio Brasileiro de Engenharia da Nanotecnologia), compartilhando resultados e aprendizados.",
+          "experience.2024.fig2":
+            "Resumo publicado nos anais do congresso, consolidando os resultados do estudo.",
+          "experience.2024.fig3": "Apresentação na SIAC 2024 com foco nos avanços do projeto.",
+          "experience.2025.title": "Nova casa e conexões em catálise",
+          "experience.2025.p1":
+            "Em 2025 cheguei ao LIPCAT (Laboratório de Intensificação de Processos e Catálise), que virou minha casa. Gosto de acompanhar e compartilhar as publicações do laboratório no <a class=\"inline-link\" href=\"https://www.lipcat.com.br/pt\" target=\"_blank\" rel=\"noopener\">site oficial</a> e no <a class=\"inline-link\" href=\"https://www.instagram.com/lipcatufrj/\" target=\"_blank\" rel=\"noopener\">Instagram</a>, porque elas mostram o dia a dia do grupo e as linhas de pesquisa que estão ganhando forma.",
+          "experience.2025.p2":
+            "Graças ao LIPCAT, participei do 6º Encontro Regional de Catálise (ERCAT 2025), onde acompanhei palestras e discuti temas emergentes da catálise no Brasil e no mundo.",
+          "experience.2025.fig1": "Confraternização de fim de ano com o time do LIPCAT.",
+          "contact.title": "Contato",
+          "contact.subtitle": "Aberto a conexões, projetos e trocas técnicas.",
+          "contact.emailLabel": "Email",
+          "contact.linkedinLabel": "LinkedIn",
+          "contact.note":
+            "Disponível para conversas sobre simulação de processos, automação e pesquisa aplicada.",
+          "footer.note": "© 2026 Rafael Costa Amaro de Oliveira. Todos os direitos reservados.",
+        },
+        en: {
+          "nav.about": "About",
+          "nav.skills": "Skills",
+          "nav.experience": "Experience",
+          "nav.contact": "Contact",
+          "hero.eyebrow": "Welcome to my academic corner",
+          "hero.title": "Nice to meet you, I'm Rafael!",
+          "hero.subtitle":
+            "I'm an Industrial Chemistry undergrad at UFRJ and I like turning science into processes that actually work. Here you'll see a bit of my journey, my areas of focus, and what drives my research.",
+          "hero.cta.primary": "See my journey",
+          "hero.cta.secondary": "Talk to me",
+          "about.title": "About",
+          "about.areas.title": "Areas of focus",
+          "about.areas.item1": "Kinetics and thermodynamics (reactions and energy).",
+          "about.areas.item2": "Process engineering and energy integration.",
+          "about.areas.item3": "Heterogeneous catalysis and catalytic performance.",
+          "about.areas.item4": "Energy transition: H2 and decarbonization.",
+          "about.areas.item5": "Modeling, experiments, and data analysis.",
+          "about.tech.title": "Technologies",
+          "skills.title": "Skills",
+          "skills.subtitle": "If you want the technical side, these are the areas I dive into most.",
+          "skills.modeling.title": "Process modeling",
+          "skills.modeling.desc":
+            "I map flows, balances, and scenarios to understand the process end to end.",
+          "skills.thermo.title": "Applied thermodynamics",
+          "skills.thermo.desc": "Equilibrium, energy, and real behavior of operating systems.",
+          "skills.kinetics.title": "Kinetics and reactions",
+          "skills.kinetics.desc": "Mechanisms, reaction rates, and transport limits in the real world.",
+          "skills.energy.title": "Energy integration",
+          "skills.energy.desc": "I focus on efficiency, reuse, and smarter process routes.",
+          "skills.data.title": "Data and automation",
+          "skills.data.desc": "I organize data and automate analysis to speed up technical decisions.",
+          "skills.docs.title": "Technical documentation",
+          "skills.docs.desc": "Clear records of hypotheses, results, and learnings.",
+          "experience.title": "Experience",
+          "experience.subtitle": "To understand where I am today, here is a quick timeline of my journey.",
+          "experience.timelineLabel": "Timeline",
+          "experience.2022.title": "Early steps and first projects",
+          "experience.2022.p1":
+            "In 2022 I joined LaMMP (Laboratório de Microbiologia Molecular e Proteínas) and the BOSS Group (Grupo de Biocatálise e Síntese Orgânica), where I started working with biocatalysis and organic synthesis. My focus was on converting fatty acids into hydrocarbons using the CVFAP enzyme, aiming to understand catalytic efficiency and apply this route as a sustainable alternative for biofuels.",
+          "experience.2022.p2":
+            "That same year, I joined the outreach project <strong>SE LIGA NA BIOTEC!</strong> during SNCT 2022. The idea was to bring public school students closer to UFRJ lab work with interactive activities and accessible explanations.",
+          "experience.2022.p3":
+            "This project was published in Revista Ensina Biotec (Vol. 2, 2023). <a class=\"inline-link\" href=\"https://revistaensinabiotec.ufop.br/\" target=\"_blank\" rel=\"noopener\">View journal</a>",
+          "experience.2022.fig1":
+            "Interactive stations during the visit to the Microbial Biotechnology Lab, with hands-on demonstrations and microbiology learning materials.",
+          "experience.2022.fig2":
+            "Experimental demonstrations in the biotechnology lab, focused on fermentation, good practices, and hygiene in a research environment.",
+          "experience.2023.title": "Closing cycles and new paths",
+          "experience.2023.p1":
+            "In 2023 I wrapped up my time at the BOSS Group (Grupo de Biocatálise e Síntese Orgânica) and LaMMP (Laboratório de Microbiologia Molecular e Proteínas). During that period, I supported research in partnership with SENAI CETIQT, expanding my contact with industrial applications.",
+          "experience.2023.p2":
+            "It was also my first conference presentation, at SIBEN, which motivated me to keep learning with consistency.",
+          "experience.2023.fig1": "Closing a cycle in the lab, celebrating the team and the learnings.",
+          "experience.2023.fig2": "My first SIAC presentation, with feedback from the community.",
+          "experience.2023.fig3": "Record of our collaboration with SENAI CETIQT.",
+          "experience.2024.title": "First steps toward industry",
+          "experience.2024.p1":
+            "In 2024 I focused on research at LMCP (Laboratório de Macromoléculas e Colóides na Indústria do Petróleo), in a line partnered with Shell using silica oxide nanoparticles in polymer solutions to create nanofluids that change carbonate rock wettability, aiming at offshore EOR applications.",
+          "experience.2024.p2":
+            "In the second half of the year, I worked on building a bibliographic and data base for a produced-water reinjection (PWRI) pilot plant with Petrobras, studying optimization strategies and solution preparation. That was when my interest in simulations, automation, and process modeling truly started.",
+          "experience.2024.fig1":
+            "Presentation at SIBEN (Brazilian Symposium of Nanotechnology Engineering), sharing results and learnings.",
+          "experience.2024.fig2":
+            "Abstract published in the conference proceedings, consolidating the study results.",
+          "experience.2024.fig3": "SIAC 2024 presentation focused on project progress.",
+          "experience.2025.title": "New home and catalysis connections",
+          "experience.2025.p1":
+            "In 2025 I joined LIPCAT (Laboratório de Intensificação de Processos e Catálise), which became my home. I like following and sharing the lab's updates on the <a class=\"inline-link\" href=\"https://www.lipcat.com.br/pt\" target=\"_blank\" rel=\"noopener\">official website</a> and on <a class=\"inline-link\" href=\"https://www.instagram.com/lipcatufrj/\" target=\"_blank\" rel=\"noopener\">Instagram</a>, because they show the group's day-to-day and the research lines taking shape.",
+          "experience.2025.p2":
+            "Thanks to LIPCAT, I attended the 6th Regional Catalysis Meeting (ERCAT 2025), where I listened to talks and discussed emerging catalysis topics in Brazil and worldwide.",
+          "experience.2025.fig1": "End-of-year gathering with the LIPCAT team.",
+          "contact.title": "Contact",
+          "contact.subtitle": "Open to connections, projects, and technical exchanges.",
+          "contact.emailLabel": "Email",
+          "contact.linkedinLabel": "LinkedIn",
+          "contact.note":
+            "Available for conversations about process simulation, automation, and applied research.",
+          "footer.note": "© 2026 Rafael Costa Amaro de Oliveira. All rights reserved.",
+        },
+      };
+
+      const i18nElements = document.querySelectorAll("[data-i18n]");
+      const langButtons = document.querySelectorAll("[data-lang]");
+
+      const applyLanguage = (lang) => {
+        const dictionary = translations[lang] || translations.pt;
+        i18nElements.forEach((element) => {
+          const key = element.dataset.i18n;
+          const value = dictionary[key];
+          if (!value) {
+            return;
+          }
+          if (element.dataset.i18nHtml === "true") {
+            element.innerHTML = value;
+          } else {
+            element.textContent = value;
+          }
+        });
+        document.documentElement.lang = lang === "en" ? "en" : "pt-BR";
+        langButtons.forEach((button) => {
+          const isActive = button.dataset.lang === lang;
+          button.classList.toggle("is-active", isActive);
+        });
+        localStorage.setItem("siteLang", lang);
+      };
+
+      langButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          applyLanguage(button.dataset.lang);
+        });
+      });
+
+      const savedLang = localStorage.getItem("siteLang") || "pt";
+      applyLanguage(savedLang);
+
+      const modal = document.querySelector(".photo-modal");
+      const modalImg = document.querySelector(".photo-modal-img");
+      const previews = document.querySelectorAll(".photo-preview");
+
+      const openModal = (src, alt) => {
+        modalImg.src = src;
+        modalImg.alt = alt || "";
+        modal.hidden = false;
+        document.body.style.overflow = "hidden";
+      };
+
+      const closeModal = () => {
+        modal.hidden = true;
+        modalImg.src = "";
+        modalImg.alt = "";
+        document.body.style.overflow = "";
+      };
+
+      previews.forEach((preview) => {
+        const keepYearOpen = () => {
+          const yearCard = preview.closest(".year-card");
+          const toggle = yearCard ? yearCard.querySelector(".year-toggle") : null;
+          if (toggle) {
+            toggle.checked = true;
+          }
+        };
+
+        preview.addEventListener("click", () => {
+          keepYearOpen();
+          openModal(preview.dataset.full, preview.dataset.alt);
+        });
+        preview.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            keepYearOpen();
+            openModal(preview.dataset.full, preview.dataset.alt);
+          }
+        });
+      });
+
+      modal.addEventListener("click", (event) => {
+        if (event.target.matches("[data-close]") || event.target === modal) {
+          closeModal();
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !modal.hidden) {
+          closeModal();
+        }
+      });
+    </script>
   </body>
 </html>
