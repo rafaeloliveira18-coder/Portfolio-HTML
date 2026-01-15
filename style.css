@@ -218,16 +218,24 @@ html[data-theme="dark"] .nav {
   background: rgba(231, 239, 255, 0.9);
   color: var(--blue-900);
   border-radius: 999px;
-  padding: 6px 14px;
+  padding: 6px 10px;
   font-weight: 700;
   letter-spacing: 0.4px;
   cursor: pointer;
+  min-width: 40px;
+  display: grid;
+  place-items: center;
 }
 
 html[data-theme="dark"] .theme-toggle {
   border-color: rgba(130, 165, 240, 0.4);
   background: rgba(18, 26, 46, 0.95);
   color: var(--ink);
+}
+
+.theme-icon {
+  font-size: 16px;
+  line-height: 1;
 }
 
 .hero-content {

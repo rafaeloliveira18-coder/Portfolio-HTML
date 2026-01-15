@@ -24,7 +24,9 @@
             <img src="Assets/Photos and Logos/EN.png" alt="English" />
           </button>
         </div>
-        <button class="theme-toggle" type="button" data-theme-toggle>Dark</button>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Alternar tema">
+          <span class="theme-icon" aria-hidden="true">☾</span>
+        </button>
       </nav>
       <div class="hero-main">
         <div class="hero-content">
@@ -596,7 +598,15 @@
       const applyTheme = (theme) => {
         document.documentElement.dataset.theme = theme;
         if (themeToggle) {
-          themeToggle.textContent = theme === "dark" ? "Light" : "Dark";
+          const icon = theme === "dark" ? "☀" : "☾";
+          const label = theme === "dark" ? "Tema claro" : "Tema escuro";
+          const iconEl = themeToggle.querySelector(".theme-icon");
+          if (iconEl) {
+            iconEl.textContent = icon;
+          } else {
+            themeToggle.textContent = icon;
+          }
+          themeToggle.setAttribute("aria-label", label);
         }
         localStorage.setItem("siteTheme", theme);
       };
