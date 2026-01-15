@@ -169,7 +169,7 @@
         <div class="year-timeline">
           <div class="year-card">
             <input id="year-2022" class="year-toggle" type="checkbox" />
-            <label class="year-summary" for="year-2022">2022</label>
+            <label class="year-summary" for="year-2022" aria-expanded="false">2022</label>
 
             <div class="year-body">
               <h3 data-i18n="experience.2022.title">Início da jornada e primeiros projetos</h3>
@@ -222,7 +222,7 @@
 
           <div class="year-card">
             <input id="year-2023" class="year-toggle" type="checkbox" />
-            <label class="year-summary" for="year-2023">2023</label>
+            <label class="year-summary" for="year-2023" aria-expanded="false">2023</label>
 
             <div class="year-body">
               <h3 data-i18n="experience.2023.title">Encerramento de ciclos e novos caminhos</h3>
@@ -264,7 +264,7 @@
 
           <div class="year-card">
             <input id="year-2024" class="year-toggle" type="checkbox" />
-            <label class="year-summary" for="year-2024">2024</label>
+            <label class="year-summary" for="year-2024" aria-expanded="false">2024</label>
 
             <div class="year-body">
               <h3 data-i18n="experience.2024.title">Primeiro contato frente à indústria</h3>
@@ -316,7 +316,7 @@
 
           <div class="year-card">
             <input id="year-2025" class="year-toggle" type="checkbox" />
-            <label class="year-summary" for="year-2025">2025</label>
+            <label class="year-summary" for="year-2025" aria-expanded="false">2025</label>
 
             <div class="year-body">
               <h3 data-i18n="experience.2025.title">Nova casa e conexões em catálise</h3>
@@ -610,6 +610,20 @@
 
       const savedTheme = localStorage.getItem("siteTheme") || "light";
       applyTheme(savedTheme);
+
+      const yearCards = document.querySelectorAll(".year-card");
+      yearCards.forEach((card) => {
+        const summary = card.querySelector(".year-summary");
+        const toggle = card.querySelector(".year-toggle");
+        if (!summary || !toggle) {
+          return;
+        }
+        summary.addEventListener("click", (event) => {
+          event.preventDefault();
+          toggle.checked = !toggle.checked;
+          summary.setAttribute("aria-expanded", toggle.checked ? "true" : "false");
+        });
+      });
 
       const modal = document.querySelector(".photo-modal");
       const modalImg = document.querySelector(".photo-modal-img");
