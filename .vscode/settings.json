@@ -1,0 +1,36 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  "prettier.printWidth": 100,
+  "prettier.tabWidth": 2,
+  "prettier.useTabs": false,
+  "prettier.singleQuote": false,
+  "prettier.semi": true,
+  "prettier.trailingComma": "es5",
+
+  "html.format.wrapLineLength": 100,
+  "html.format.indentInnerHtml": true,
+
+  "css.validate": true,
+  "scss.validate": false,
+  "less.validate": false,
+
+  "liveServer.settings.port": 5500,
+  "liveServer.settings.suppressInfoMessages": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+
+  "auto-rename-tag.activationOnLanguage": [
+    "html",
+    "xml"
+  ],
+
+  "cssPeek.enable": true,
+  "cssPeek.peekFromClasses": true,
+  "cssPeek.peekFromIds": true,
+
+  "editor.minimap.enabled": false,
+  "editor.wordWrap": "on",
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000
+}
