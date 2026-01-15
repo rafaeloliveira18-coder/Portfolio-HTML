@@ -830,6 +830,20 @@ h1 {
   .skills .section-header p {
     white-space: normal;
   }
+
+  .nav {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .lang-switch {
+    margin-left: auto;
+  }
+
   .nav-links {
     display: none;
   }
@@ -843,9 +857,32 @@ h1 {
     align-items: flex-start;
   }
 
+  .hero-content {
+    margin-top: 32px;
+  }
+
+  .hero-logos {
+    justify-content: flex-start;
+    gap: 12px;
+    max-width: 100%;
+  }
+
+  .hero-logos img {
+    height: 72px;
+  }
+
+  .hero-logos .logo-lipcat {
+    height: 92px;
+  }
+
+  .hero-profile {
+    justify-content: center;
+  }
+
   .hero-profile img {
-    width: min(320px, 100%);
-    height: auto;
+    width: min(280px, 84vw);
+    height: min(280px, 84vw);
+    margin-top: 28px;
   }
 
   .cta-row {
@@ -859,6 +896,81 @@ h1 {
 
   .tool-logos {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .section {
+    padding: 52px 6vw;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  .skill-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  .tool-badges {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tool-badge img {
+    height: 68px;
+  }
+
+  .year-timeline {
+    padding-left: 18px;
+  }
+
+  .year-timeline::before {
+    left: 6px;
+  }
+
+  .year-summary::before {
+    left: -22px;
+  }
+
+  .year-summary {
+    padding: 10px 16px;
+  }
+
+  .year-body {
+    padding: 0 18px;
+  }
+
+  .year-toggle:checked ~ .year-body {
+    padding: 18px;
+  }
+
+  .year-card:hover .year-body {
+    padding: 18px;
+  }
+
+  .year-logos {
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .year-logos img {
+    height: 88px;
+  }
+
+  .logo-boss {
+    height: 110px;
+  }
+
+  .logo-lmcp {
+    height: 150px;
+  }
+
+  .logo-ima {
+    height: 120px;
+  }
+
+  .photo-grid {
+    grid-template-columns: 1fr;
   }
 
   .photo-card figcaption {
@@ -882,6 +994,16 @@ h1 {
   .section-header p,
   .subtitle {
     max-width: 100%;
+  }
+
+  .contact-card p {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .divider {
+    display: none;
   }
 }
 
